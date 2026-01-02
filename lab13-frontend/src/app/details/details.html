@@ -1,0 +1,23 @@
+<div *ngIf="person" style="padding: 20px; border: 1px solid #ccc; margin-top: 20px; font-family: Arial, sans-serif;">
+  <h2 style="color: #333;">Szczegóły osoby</h2>
+  <hr>
+  <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+    <p><strong>Imię:</strong> {{ person.firstName }}</p>
+    <p><strong>Nazwisko:</strong> {{ person.familyName }}</p>
+    <p><strong>Wiek:</strong> {{ person.age }} lat</p>
+    
+    <h3 style="margin-top: 20px; border-bottom: 1px solid #ddd;">Adres zamieszkania:</h3>
+    <p><strong>Miasto:</strong> {{ person.address.city }}</p>
+    <p><strong>Ulica:</strong> {{ person.address.street }}</p>
+    <p><strong>Kod pocztowy:</strong> {{ person.address.postCode }}</p>
+  </div>
+  
+  <div style="margin-top: 20px;">
+<button routerLink="/" style="padding: 10px 15px; cursor: pointer;">Powrót</button>      
+  </div>
+</div>
+
+<div *ngIf="!person" style="padding: 20px; color: red;">
+  <p>Nie znaleziono danych osoby o podanym identyfikatorze.</p>
+  <a routerLink="/">Wróć do listy głównej</a>
+</div>

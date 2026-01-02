@@ -1,0 +1,33 @@
+<div style="padding: 20px;">
+  <h2>Dodaj nową osobę</h2>
+  
+  <form (ngSubmit)="save()"> <div style="margin-bottom: 10px;">
+      <label>Imię:</label><br>
+      <input [(ngModel)]="person.firstName" name="firstName" required>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Nazwisko:</label><br>
+      <input [(ngModel)]="person.familyName" name="familyName" required>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Wiek:</label><br>
+      <input type="number" [(ngModel)]="person.age" name="age" required>
+    </div>
+
+    <h3>Adres</h3>
+    <div style="margin-bottom: 10px;">
+      <label>Miasto:</label>
+      <input [(ngModel)]="person.address.city" name="city">
+      
+      <label style="margin-left: 10px;">Ulica:</label>
+      <input [(ngModel)]="person.address.street" name="street">
+    </div>
+
+    <button type="submit" style="background-color: green; color: white; padding: 10px;">
+      ZAPISZ W BAZIE DANYCH
+    </button>
+
+  </form>
+</div>
