@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.list-card, .form-card {
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important;
+    border-radius: 15px !important;
+}
+
+.mat-mdc-raised-button {
+    font-size: 1.1rem !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase;
+}
+
+.full-width {
+    width: 100%;
+}
+.address-row {
+    display: flex;
+    gap: 10px;
+}
